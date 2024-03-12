@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 function Navbar() {
   return (
@@ -6,15 +7,17 @@ function Navbar() {
         <div className="flex items-center">
           <img src="https://img.icons8.com/hatch/64/1A1A1A/split.png" alt="Logo" />
           <h1 className="ml-2 mr-3 text-3xl oswald-bold">
-            <a href="/">SplitPay</a>
+            <Link to="/">SplitPay</Link>
           </h1>
         </div>
         <ul className="flex ml-auto mr-11 text-lg">
-          <li className="text-gray-500 hover:text-gray-700 font-extrabold inconsolata-Normal">Dashboard</li>
+          <li className="text-gray-500 hover:text-gray-700 font-extrabold inconsolata-Normal">
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
         </ul>
         <div className="flex items-center">
           <button className="hover:bg-black hover:text-white border border-black rounded-md text-xl px-3 py-2 oswald-light">
-            <a href="#" > Sign in </a>
+            <Link to="/signin" > Sign in </Link>
           </button>
         </div>
       </nav>
